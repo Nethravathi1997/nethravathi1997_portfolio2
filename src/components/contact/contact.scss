@@ -1,0 +1,182 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: white;
+  display: flex;
+
+  h1{
+    margin-left: 300px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    overflow: hidden;
+    align-items: center;
+    h1{
+      margin-left: 600px;
+      margin-top: 10px;
+      font-size: 35px;
+    }
+
+    
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+
+    .logo {
+      display: flex;
+      margin-left: 380px;
+      @include mobile {
+        display: none;
+        flex-direction: column;
+        margin-left: 80px;
+      }
+
+      img {
+        height: 160px;
+        width: 160px;
+        margin: 20px;
+        margin-top: 50%;
+        @include mobile {
+            margin-top: 0%;
+            
+            height: 100%;
+            overflow: hidden;
+
+            margin-bottom: 50px;
+          }
+
+        &:hover {
+          height: 170px;
+          width: 170px;
+          position: relative;
+          transition: all 0.5s ease-in-out;
+
+          @include mobile {
+            margin-top: 0%;
+            margin-bottom: 20%;
+            height: 100%;
+            overflow: hidden;
+          }
+        }
+      }
+      .mail{
+          height: 235px;
+          width: 190px;
+          margin-top: 63px;
+
+          &:hover{
+            height: 250px;
+            width: 210px;
+          }
+      }
+    }
+
+    .mobile{
+        display: none;
+
+        img{
+            height: 60px;
+            width: 60px;
+            margin: 20px;
+        }
+
+        @include mobile {
+           display: flex;
+           flex-direction: column;
+          }
+
+          
+    }
+
+    .down {
+        
+      img {
+        height: 200px;
+        width: 300px;
+        position: relative;
+        margin-left: 530px;
+        
+
+        @include mobile {
+            margin-top: -20%;
+            margin-bottom: 20%;
+            height: 80%;
+            width: 90%;
+            
+            overflow: visible;
+          }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 30;
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        border: 1px solid crimson;
+        border-radius: 5px;
+
+        &:hover {
+          border: 2px solid crimson;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        border: 1px solid crimson;
+        border-radius: 5px;
+
+        &:hover {
+          border: 2px solid crimson;
+        }
+
+        @include mobile {
+          margin-top: 10px;
+        }
+      }
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: Green;
+      }
+    }
+  }
+}

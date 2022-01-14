@@ -1,0 +1,68 @@
+@import "../../global.scss";
+.techstack {
+  background-color: white;
+  margin-top: 50px;
+  .head {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .right {
+    .tech {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: crimson;
+      }
+
+      .fend {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 50px;
+        margin-top: 20px;
+
+        .teco {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+
+          width: 120px;
+          height: 120px;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: rgb(241, 70, 105);
+            color: white;
+            box-shadow: 15px 10px rgb(223, 222, 222);
+            transition: all 0.5s ease-in-out;
+          }
+
+          @include mobile {
+            margin-left: 12px;
+          }
+
+          img {
+            width: 80px;
+            height: 75px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            @include mobile {
+              width: 40px;
+              height: 40px;
+              margin-right: 5px;
+              margin-left: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
